@@ -1,14 +1,21 @@
 const socket = io();
 
-    const togglebutton = document.getElementById('toggle-relais')
+    const togglebuttonrelais1 = document.getElementById('toggle-relais1')
+    const togglebuttonrelais2 = document.getElementById('toggle-relais2')
     const form = document.getElementById('form');
     const input = document.getElementById('input');
     const messages = document.getElementById('messages');
 
-    togglebutton.addEventListener('click' ,(e) => {
+    togglebuttonrelais1.addEventListener('click' ,(e) => {
         e.preventDefault();
-        console.log('toggle');
-        socket.emit('toggle');
+        console.log('toggle-relais1');
+        socket.emit('toggle-relais1');
+    })
+
+    togglebuttonrelais2.addEventListener('click' ,(e) => {
+        e.preventDefault();
+        console.log('toggle-relais2');
+        socket.emit('toggle-relais2');
     })
 
     form.addEventListener('submit', (e) => {
