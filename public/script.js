@@ -5,7 +5,7 @@ const socket = io();
     const input = document.getElementById('input');
     const messages = document.getElementById('messages');
 
-    togglebutton.addEventListener('onclick' ,(e) => {
+    togglebutton.addEventListener('click' ,(e) => {
         e.preventDefault();
         console.log('toggle');
         socket.emit('toggle');
